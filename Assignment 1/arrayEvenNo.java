@@ -1,14 +1,16 @@
-import java.util.*;
-
-
 public class arrayEvenNo {
-    
-    public static void main(String args[]){
-        System.out.println("The command line arguments: ");
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Usage: java EvenNumbersFromArray <number1> <number2> ...");
+            return;
+        }
 
-        for(int i = 0; i < args.length; i++){
-            System.out.println("one"+args[i]);
-
+        System.out.println("Even numbers from the array:");
+        for (String arg : args) {
+            int num = Integer.parseInt(arg);
+            if (num % 2 == 0) {
+                System.out.println(num);
+            }
         }
     }
 }
